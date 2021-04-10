@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Music Website</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="photo/logo.png" class="logo">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">CONNECT</a></li>
+                <li><a href="http://ashshkan.ml/">ABOUT</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="left-col">
+                <h1>Best<br />Sad<br />Songs</h1>
+            </div>
+            <div class="right-col">
+                <p>Click Here To Listen</p>
+                <img src="photo/play.png" id="icon">
+            </div>
+        </div>
+    </div>
+    <audio id="mysoung">
+        <source src="photo/Cry Baby.mp3" type="audio/mp3">
+    </audio>
+<script>
+    var mysoung = document.getElementById("mysoung");
+    var icon = document.getElementById("icon");
+
+    icon.onclick = function(){
+        if(mysoung.paused){
+            mysoung.play();
+            icon.src = "photo/pause.png";
+        }else{
+            mysoung.pause();
+            icon.src = "photo/play.png";
+        }
+    }
+</script>
+    
+</body>
+</html>
